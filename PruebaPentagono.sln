@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaPentagono", "PruebaPentagono\PruebaPentagono.csproj", "{9A488F3F-0200-4421-9BEA-B0424E1A1370}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PentagonoTest", "PentagonoTest\PentagonoTest.csproj", "{794011E4-6B37-40FB-9A39-CAAF9FD4C0F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{9A488F3F-0200-4421-9BEA-B0424E1A1370}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A488F3F-0200-4421-9BEA-B0424E1A1370}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A488F3F-0200-4421-9BEA-B0424E1A1370}.Release|Any CPU.Build.0 = Release|Any CPU
+		{794011E4-6B37-40FB-9A39-CAAF9FD4C0F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{794011E4-6B37-40FB-9A39-CAAF9FD4C0F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{794011E4-6B37-40FB-9A39-CAAF9FD4C0F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{794011E4-6B37-40FB-9A39-CAAF9FD4C0F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

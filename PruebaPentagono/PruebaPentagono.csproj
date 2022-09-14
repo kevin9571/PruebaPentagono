@@ -72,8 +72,9 @@
   <ItemGroup>
     <Content Include="assets\factorajepentagono.png" />
     <Content Include="Error.aspx" />
-    <Content Include="Vistas\index.html" />
-    <Content Include="Vistas\scripts\index.js" />
+    <Content Include="index.aspx" />
+    <Content Include="Vistas\vercitas.html" />
+    <Content Include="Vistas\scripts\vercitas.js" />
     <Content Include="Vistas\shared\scripts\utilidades.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -96,6 +97,13 @@
     <Compile Include="Error.aspx.cs">
       <DependentUpon>Error.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Modelos\CitaMedica.cs" />
     <Compile Include="Modelos\Especialidad.cs" />

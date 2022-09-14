@@ -1,17 +1,17 @@
 ﻿using PruebaPentagono.App_Data;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
 using System.Web;
 
 namespace PruebaPentagono.Modelos
 {
-    public class Especialidad
+    public class Especialidad : Util
     {
+        public string nombre;
+        SqlServer sqlServer = new SqlServer();
+
         public DataTable Show()
-        {
-            SqlServer sqlServer = new SqlServer();
+        {            
             string query = "SELECT * FROM especialidad";
             try
             {
@@ -19,11 +19,27 @@ namespace PruebaPentagono.Modelos
             }
             catch (Exception ex)
             {
-                HttpContext.Current.Session["url"] = HttpContext.Current.Request.Url.AbsoluteUri;
-                HttpContext.Current.Session["error"] = ex.Message;
-                HttpContext.Current.Response.Redirect("error.aspx", true);
+                PrintException(ex.Message);
             }
             return null;
         }
+
+        public bool Save()
+        {
+            string query = $"insert into especialidad(nombre) values('{this.nombre}');";
+            try
+            {
+                return sqlServer.Ejecutar(query);
+            }
+            catch (Exception ex)
+            {
+                PrintException(ex.Message);
+            }
+            return false;
+        }
+
+
+
+
     }
 }
