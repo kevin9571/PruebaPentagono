@@ -1,0 +1,135 @@
+﻿<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Prueba Pentagono</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="../assets/factorajepentagono.png" height="100px" />
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ver citas</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#CrearCita">Crear cita </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div id="VerCitas">
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Paciente</th>
+                    <th>Medico</th>
+                    <th>Espcecialidad</th>
+                    <th>Fecha y Hora</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="BodyCitas">
+            </tbody>
+        </table>
+
+    </div>
+
+    <div id="CrearCita" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Agendar Cita</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row">
+
+                        <div class="col-3">
+                            <label for="SelectPaciente">Seleccione al paciente</label>
+                            <select class="form-control" id="SelectPaciente" name="SelectPaciente">
+                            </select>
+                        </div>
+                        <div class="col-3">
+                            <label for="SelectEspecialidad">Seleccione la especialidad</label>
+                            <select class="form-control" id="SelectEspecialidad" name="SelectEspecialidad" onchange="ListarDoctores()">
+                            </select>
+                        </div>
+                        <div class="col-3">
+                            <label for="SelectMedico">Seleccione al medico</label>
+                            <select class="form-control" id="SelectMedico" name="SelectMedico">
+                            </select>
+                        </div>
+
+                        <div class="col-3">
+                            <label for="FechaHora">Seleccione la fecha y hora</label>
+                            <input class="form-control" type="datetime-local" id="FechaHora" name="FechaHora">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" onclick="IngresarCita()">Crear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="AgregarDiagnostico" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Ingresar Diagnostico</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row">
+
+                        <div class="col-12">
+                            <textarea class="form-control" id="TextArea" rows="10"></textarea>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" onclick="CerrarCita()">Ingresar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+
+<!--Creado-->
+<script src="shared/scripts/utilidades.js"></script>
+<script src="scripts/index.js"></script>

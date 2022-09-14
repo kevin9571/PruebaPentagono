@@ -1,0 +1,38 @@
+﻿PRUEBA TECNICA
+
+Prerrequisitos:
+	1. Visual Studio
+	2. Gestor de base de datos SqlServer.
+
+Descripción:
+*	Se tiene la necesidad de realizar una aplicación web, que permita registrar las citas
+	médicas de una clínica,
+	
+*	donde los pacientes reciben su consulta médica mediante la
+	programación de una cita. 
+	
+*	En dicha cita se vincula al paciente y al doctor o especialista
+	para una fecha y hora. 
+	
+*	Después de la cita el doctor registra el diagnóstico del paciente.
+
+Aspectos para considerar:
+1. Para la solución del proyecto utilizar .NET Framework
+2. Crear todas las tablas necesarias según sea su consideración.
+3. Desarrollar el Back-End como prioridad 1 y en segunda prioridad el Front-End de la
+aplicación.
+4. Utilizar patrones de arquitectura en el desarrollo de la solución.
+5. Aplicar principios SOLID.
+6. Agregar pruebas unitarias.
+7. No utilizar el asistente de Visual Studio para generar código de forma automática.
+8. No utilizar Entity Framework para administrar los CRUD.
+9. Versionar el proyecto en GIT: Resguardar el proyecto en algún repositorio público
+de Git, creando una rama con la fecha del día de la prueba en formato
+YYYYMMDD, el Primer nombre y apellido del participante ejemplo:
+20210722JuanPerez.
+Aclaraciones:
+Es válido utilizar alguna herramienta como cliente de la API.
+Si se realiza el Front-End no es necesario utilizar una interfaz de usuario tan estructurada
+ya que no se está evaluando diseño de interfaz, se evaluará únicamente llegar al objetivo.
+Al finalizar la prueba dispondrá de 25 minutos para defender su solución y responder las
+preguntas de los evaluadores.
